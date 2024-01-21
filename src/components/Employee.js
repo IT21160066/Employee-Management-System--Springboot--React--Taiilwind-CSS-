@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Employee = ({ employee, deleteEmployee }) => {
   const navigate = useNavigate();
+
   const updateEmployee = (e, empId) => {
     e.preventDefault();
     navigate(`/update/${empId}`);

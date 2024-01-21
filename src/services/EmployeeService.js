@@ -20,6 +20,14 @@ class EmployeeService {
       throw error;
     }
   }
+
+  getEmployeeById(empId) {
+    return axios.get(EMPLOYEE_BASE_URL + "/" + empId);
+  }
+
+  updateEmployee(empId, employee) {
+    return axios.put(`${EMPLOYEE_BASE_URL}/${empId}`, employee);
+  }
 }
 
 export default new EmployeeService();
